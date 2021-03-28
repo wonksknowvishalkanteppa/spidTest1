@@ -70,10 +70,10 @@ function checkspeed() {
         if (this.readyState == 4 && this.status == 200) {
             var end = new Date().getTime();
             data = this.responseText;
-            console.log(data);
+            // console.log(data);
 
             var timeDuration = (end - start) / 1000;
-            console.log("time: ", timeDuration)
+            // console.log("time: ", timeDuration)
 
             var bps = (size / timeDuration).toFixed(2);
             var KBps = (bps / 1024).toFixed(2);
@@ -85,7 +85,7 @@ function checkspeed() {
             var data = '<br> Chunk size: ' + size / 1024 / 1024 + 'MB';
             data += '<br> Time Taken: ' + timeDuration + 's';
             data += '<br>Speed: ' + Mbps + ' Mbps';
-            console.log("speed: ", MBps);
+            // console.log("speed: ", MBps);
             $("#info").html(data);
 
         }

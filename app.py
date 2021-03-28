@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 app.debug = True
-CORS(app)
+# CORS(app)
 
 
 @app.route("/", methods=["GET", "POST"])

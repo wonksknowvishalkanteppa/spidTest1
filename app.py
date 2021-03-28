@@ -16,7 +16,7 @@ def spid():
         data = request.get_json()
 
         # print(data)
-        print("req")
+        # print("req")
 
         del data
         return {"success": True}

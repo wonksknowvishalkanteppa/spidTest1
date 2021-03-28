@@ -10,18 +10,16 @@ CORS(app)
 @app.route("/", methods=["GET", "POST"])
 def spid():
     if request.method == "GET":
-        return render_template("test.html")
+        return render_template("speedtest.html")
     else:
-        
+        # data=request.files['files']
+        data = request.get_json()
+
+        # print(data)
+        print("req")
+
+        del data
         return {"success": True}
-
-# @app.route("/",methods=["GET","POST"])
-# def test():
-
-#     file=request.files['data']
-#     print(file)
-#     del file
-#     return {"success":True}
 
 
 if __name__ == "__main__":

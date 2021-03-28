@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Spidtest</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='speedtest.js') }}"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/network-speed@2.1.1/app.min.js"></script> -->
+    <!-- <script src="bower_components/network-js/dist/network.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<style>
+    .rightside {
+        float: right;
+        margin-right: 50px;
+    }
+</style>
+
+<body>
+    <!-- <div id="info">
+        <button class="btn btn-outline-dark" onclick="speedtest()">Check spid</button><br>
+    </div> -->
+    <!-- updates every 5 seconds
+    <div id="speed">speed: 0kbs</div>
+    <div id="average">average: 0kbs</div> -->
+    <!-- <input id="files" type="file" name="files" onchange="checkspeed1()"><br> -->
+    <div id="info">
+        <br> Chunk size: N/A
+        <br> Time Taken: 0s
+        <br> Speed: 0 Mbps
+        <br>
+    </div>
+    <div id="final">
+        <br> Average upload speed: 0 KBps
+        <br>
+    </div>
+    <br>
+    <button class="btn btn-outline-dark" onclick="main1()">Check speed</button>
+</body>
+
+</html>

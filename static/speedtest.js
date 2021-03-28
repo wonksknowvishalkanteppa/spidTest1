@@ -73,7 +73,7 @@ function checkspeed() {
             // console.log(data);
 
             var timeDuration = (end - start) / 1000;
-            // console.log("time: ", timeDuration)
+            console.log("time: ", timeDuration)
 
             var bps = (size / timeDuration).toFixed(2);
             var KBps = (bps / 1024).toFixed(2);

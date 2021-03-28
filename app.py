@@ -19,7 +19,7 @@ def spid():
         # print("req")
 
         del data
-        return {}
+        return {"success": True}
 
 
 if __name__ == "__main__":

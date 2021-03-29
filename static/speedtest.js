@@ -60,7 +60,7 @@ function checkspeed() {
     xhr.setRequestHeader("Content-Type", "application/json");
 
 
-    var s = getRandomString(20);
+    var s = getRandomString(2);
     const byteSize = str => new Blob([str]).size;
     var size = byteSize(s);
 
@@ -113,9 +113,10 @@ async function main1() {
 
     for (var i = 1; i < iterations; i++) {
         checkspeed();
-        await sleep(30000);
+        await sleep(5000);
     }
 
+    // console.log(sum)
     var avg = sum / (iterations - 1);
     console.log(avg, "hi");
     var data = '<br>Average upload speed: ' + avg.toFixed(2) + ' Mbps';

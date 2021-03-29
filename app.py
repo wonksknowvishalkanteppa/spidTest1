@@ -23,5 +23,5 @@ def spid():
 
 
 if __name__ == "__main__":
-    app.jinja_env.cache = {}
-    app.run()
+    # app.jinja_env.cache = {}
+    app.run(threaded=True)

@@ -51,8 +51,9 @@ function checkspeed1() {
     };
 }
 
-// string data
+//large string data
 var sum = 0;
+
 
 function checkspeed() {
     xhr = new XMLHttpRequest();
@@ -60,7 +61,8 @@ function checkspeed() {
     xhr.setRequestHeader("Content-Type", "application/json");
 
 
-    var s = getRandomString(2);
+    var s = getRandomString(4);
+
     const byteSize = str => new Blob([str]).size;
     var size = byteSize(s);
 
@@ -108,12 +110,12 @@ async function main1() {
     var data = '<br>Average upload speed: calculating';
     $("#final").html(data);
 
-    var iterations = 3;
+    var iterations = 10;
     await sleep(5000);
 
     for (var i = 1; i < iterations; i++) {
         checkspeed();
-        await sleep(5000);
+        await sleep(8000);
     }
 
     // console.log(sum)

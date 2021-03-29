@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template, redirect
 from flask_cors import CORS
+import sys
 
 
 app = Flask(__name__)
@@ -17,7 +18,7 @@ def spid():
 
         # print(data)
         # print("req")
-
+        
         del data
         return {"success": True}
 

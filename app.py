@@ -27,7 +27,8 @@ def spid():
         source=request.environ.get("HTTP_X_FORWARDED_FOR")
         speedtest.SOURCE = source
         s=speedtest.Speedtest()
-
+        
+        s._source_address=source
         print(s.upload())
         print(s._source_address)
         del data

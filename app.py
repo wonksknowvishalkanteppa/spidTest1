@@ -20,6 +20,7 @@ def spid():
         # print("req")
         x=request.environ.get("HTTP_X_REAL_IP",request.remote_addr)
         print(x)
+        print(request.headers["X-Real-IP"])
         del data
         return {"success": True,"ip":x}
 

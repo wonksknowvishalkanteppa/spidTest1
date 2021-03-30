@@ -7,10 +7,10 @@ import speedtest
 # # s.get_best_server()
 # print(s.upload())
 
-source = "10.41.141.207"
+source = "10.45.185.241"
 speedtest.SOURCE = source
 # socket.socket = speedtest.bound_socket
 s = speedtest.Speedtest()
 s.get_best_server()
-print(s.download()/1024/1024)
-print(s.upload()/1024/1024)
+print(s.download())
+print(s.upload())

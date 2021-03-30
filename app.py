@@ -18,7 +18,7 @@ def spid():
 
         # print(data)
         # print("req")
-        print(request.remote_addr)
+        print(request.environ['HTTP_X_FORWARDED_FOR'])
         
         del data
         return {"success": True,"ip":request.remote_addr}

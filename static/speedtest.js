@@ -61,7 +61,7 @@ function checkspeed() {
     xhr.setRequestHeader("Content-Type", "application/json");
 
 
-    var s = getRandomString(4);
+    var s = getRandomString(1);
 
     const byteSize = str => new Blob([str]).size;
     var size = byteSize(s);

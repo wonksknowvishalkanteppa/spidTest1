@@ -31,7 +31,7 @@ def spid():
         print(s.upload())
 
         del data
-        return {"success": True,"ip":x}
+        return "hello"
 
 @app.route("/getip")
 def getip():

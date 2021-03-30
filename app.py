@@ -29,7 +29,7 @@ def spid():
         s=speedtest.Speedtest()
 
         print(s.upload())
-
+        print(s._source_address)
         del data
         return "hello"
 

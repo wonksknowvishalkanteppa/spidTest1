@@ -9,7 +9,7 @@ import speedtest
 
 source = "171.76.90.57"
 speedtest.SOURCE = source
-# socket.socket = speedtest.bound_socket
+
 s = speedtest.Speedtest()
 s.get_best_server()
 print(s.download()/1024/1024)

@@ -18,10 +18,10 @@ def spid():
 
         # print(data)
         # print("req")
-        print(request.environ['HTTP_X_FORWARDED_FOR'])
+        x=request.environ.get("HTTP_X_REAL_IP",request.remote_addr)
         
         del data
-        return {"success": True,"ip":request.remote_addr}
+        return {"success": True,"ip":x}
 
 
 if __name__ == "__main__":

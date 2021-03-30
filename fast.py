@@ -7,7 +7,7 @@ import speedtest
 # # s.get_best_server()
 # print(s.upload())
 
-source = "192.168.1.85"
+source = "171.76.90.57"
 speedtest.SOURCE = source
 # socket.socket = speedtest.bound_socket
 s = speedtest.Speedtest()

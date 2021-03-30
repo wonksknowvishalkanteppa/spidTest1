@@ -72,7 +72,7 @@ function checkspeed() {
         if (this.readyState == 4 && this.status == 200) {
             var end = new Date().getTime();
             data = this.responseText;
-            // console.log(data);
+            console.log(data);
 
             var timeDuration = (end - start) / 1000;
             console.log("time: ", timeDuration)

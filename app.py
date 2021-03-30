@@ -21,7 +21,7 @@ def spid():
         print(request.remote_addr)
         
         del data
-        return {"success": True}
+        return {"success": True,"ip":request.remote_addr}
 
 
 if __name__ == "__main__":

@@ -18,6 +18,7 @@ def spid():
 
         # print(data)
         # print("req")
+        print(request.remote_addr)
         
         del data
         return {"success": True}

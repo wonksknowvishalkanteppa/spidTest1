@@ -111,7 +111,7 @@ async function main1() {
     $("#final").html(data);
 
     var iterations = 10;
-    await sleep(5000);
+    await sleep(3000);
 
     for (var i = 1; i < iterations; i++) {
         checkspeed();

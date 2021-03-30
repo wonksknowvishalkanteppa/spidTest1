@@ -20,12 +20,16 @@ def spid():
         # print("req")
         x=request.environ.get("HTTP_X_REAL_IP",request.remote_addr)
         print(x)
-        print(request.environ)
+        # print(request.environ)
+
         print(request.environ.get("HTTP_X_FORWARDED_FOR"))
-        s = speedtest.Speedtest()
+
+        source=request.environ.get("HTTP_X_FORWARDED_FOR")
+        speedtest.SOURCE = source
+        s=speedtest.Speedtest()
+
         print(s.upload())
-        s=speedtest.Speedtest(source_address=request.environ.get("HTTP_X_FORWARDED_FOR"))
-        print("\n",s.upload())
+
         del data
         return {"success": True,"ip":x}
 

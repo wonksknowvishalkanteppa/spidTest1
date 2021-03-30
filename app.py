@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template, redirect
 from flask_cors import CORS
 import sys
-
+import speedtest
 
 app = Flask(__name__)
 app.debug = True
@@ -21,6 +21,7 @@ def spid():
         x=request.environ.get("HTTP_X_REAL_IP",request.remote_addr)
         print(x)
         print(request.environ)
+        print(request.environ.get("HTTP_X_FORWARDED_FOR"))
         s = speedtest.Speedtest()
         print(s.upload())
         s=speedtest.Speedtest(source_address=request.environ.get("HTTP_X_FORWARDED_FOR"))

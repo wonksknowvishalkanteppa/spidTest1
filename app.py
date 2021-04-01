@@ -11,32 +11,34 @@ app.debug = True
 @app.route("/", methods=["GET", "POST"])
 def spid():
     if request.method == "GET":
-        return render_template("speedtest2.html")
+        return render_template("speedtest1.html")
     else:
         # data=request.files['files']
         data = request.get_json()
 
         # print(data)
         # print("req")
-        x=request.environ.get("HTTP_X_REAL_IP",request.remote_addr)
-        print(x)
-        # print(request.environ)
+        # x=request.environ.get("HTTP_X_REAL_IP",request.remote_addr)
+        # print(x)
+        # # print(request.environ)
 
-        print(request.environ.get("HTTP_X_FORWARDED_FOR"))
+        # print(request.environ.get("HTTP_X_FORWARDED_FOR"))
 
-        source=request.environ.get("HTTP_X_FORWARDED_FOR")
-        speedtest.SOURCE = source
-        s=speedtest.Speedtest()
-        
-        s._source_address=source
-        print(s.upload())
-        print(s._source_address)
+        # source=request.environ.get("HTTP_X_FORWARDED_FOR")
+        # speedtest.SOURCE = source
+        # s=speedtest.Speedtest()
+
+        # s._source_address=source
+        # print(s.upload())
+        # print(s._source_address)
         del data
-        return "hello"
+        return {"success": True}
+
 
 @app.route("/getip")
 def getip():
     return request.remote_addr
+
 
 if __name__ == "__main__":
     # app.jinja_env.cache = {}

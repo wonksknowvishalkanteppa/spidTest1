@@ -11,6 +11,10 @@ source = "171.76.90.57"
 speedtest.SOURCE = source
 
 s = speedtest.Speedtest()
+s._source_address="171.76.90.57"
+print(s._source_address)
 s.get_best_server()
-print(s.download()/1024/1024)
+# print(s.download()/1024/1024)
 print(s.upload()/1024/1024)
+
+print(s._source_address)

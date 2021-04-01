@@ -11,7 +11,7 @@ app.debug = True
 @app.route("/", methods=["GET", "POST"])
 def spid():
     if request.method == "GET":
-        return render_template("speedtest1.html")
+        return render_template("speedtest.html")
     else:
         # data=request.files['files']
         data = request.get_json()

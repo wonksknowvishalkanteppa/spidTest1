@@ -61,7 +61,7 @@ function checkspeed() {
     xhr.setRequestHeader("Content-Type", "application/json");
 
 
-    var s = getRandomString(1);
+    var s = getRandomString(6);
 
     const byteSize = str => new Blob([str]).size;
     var size = byteSize(s);
@@ -115,7 +115,7 @@ async function main1() {
 
     for (var i = 1; i < iterations; i++) {
         checkspeed();
-        await sleep(8000);
+        await sleep(12000);
     }
 
     // console.log(sum)

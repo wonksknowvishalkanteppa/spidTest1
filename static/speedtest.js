@@ -74,7 +74,7 @@ function checkspeed() {
             data = this.responseText;
             console.log(data);
 
-            var timeDuration = data['time'] - 0.6;
+            var timeDuration = data['time'];
             console.log("time: ", timeDuration)
 
             var bps = (size / timeDuration).toFixed(2);

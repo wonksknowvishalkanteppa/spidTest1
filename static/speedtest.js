@@ -74,7 +74,7 @@ function checkspeed() {
             data = this.responseText;
             data = JSON.parse(data);
 
-            console.log(typeof(data));
+            console.log(data);
             console.log(data['time'].toFixed(4))
 
             var timeDuration = data['time'];

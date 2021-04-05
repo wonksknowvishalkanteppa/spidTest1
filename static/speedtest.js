@@ -72,7 +72,10 @@ function checkspeed() {
         if (this.readyState == 4 && this.status == 200) {
             // var end = new Date().getTime();
             data = this.responseText;
-            console.log(data);
+            data = JSON.parse(data);
+
+            console.log(typeof(data));
+            console.log(data['time'].toFixed(4))
 
             var timeDuration = data['time'];
             console.log("time: ", timeDuration)

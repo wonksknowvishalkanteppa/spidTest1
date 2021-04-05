@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template, redirect
 from flask_cors import CORS
 import sys
+import datetime
 import speedtest
 
 app = Flask(__name__)
@@ -14,8 +15,13 @@ def spid():
         return render_template("speedtest.html")
     else:
         # data=request.files['files']
+        start=datetime.datetime.now()
         data = request.get_json()
+        end=datetime.datetime.now()
 
+        duration=end-start
+        time=duration.total_seconds()
+        
         # print(data)
         # print("req")
         # x=request.environ.get("HTTP_X_REAL_IP",request.remote_addr)
@@ -32,7 +38,7 @@ def spid():
         # print(s.upload())
         # print(s._source_address)
         del data
-        return {"success": True}
+        return {"success": True,"time":time}
 
 
 @app.route("/getip")

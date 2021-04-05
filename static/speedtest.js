@@ -66,15 +66,15 @@ function checkspeed() {
     const byteSize = str => new Blob([str]).size;
     var size = byteSize(s);
 
-    var start = new Date().getTime();
+    // var start = new Date().getTime();
     xhr.send(JSON.stringify({ 'data': s }));
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var end = new Date().getTime();
+            // var end = new Date().getTime();
             data = this.responseText;
             console.log(data);
 
-            var timeDuration = (end - start) / 1000;
+            var timeDuration = data['time'];
             console.log("time: ", timeDuration)
 
             var bps = (size / timeDuration).toFixed(2);
